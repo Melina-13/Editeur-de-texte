@@ -1,0 +1,72 @@
+Éditeur WYSIWYG
+
+Éditeur de texte WYSIWYG (What You See Is What You Get), permet aux utilisateurs de créer, modifier et sauvegarder du texte avec une interface simple.
+
+TABLE DES MATIÈRES
+1.Installation
+2.Utilisation
+3.Personnalisation
+4.Technologies utilisées
+
+
+1.INSTALLATION : 
+
+Clonez ce dépôt ou téléchargez le code source :
+git clone <https://github.com/EpitechWebAcademiePromo2026/W-WEB-090-MAR-1-1-wysiwyg-myriam.jelidi.git>
+
+Structure du projet :
+/project
+├── /modules
+│   └── my_wysiwyg.js
+├── /css
+│   └── styles.css
+├── /js
+│   └── main.js
+├── index.html
+
+Après avoir téléchargé ou cloné le projet, ouvrez simplement le fichier index.html dans votre navigateur pour commencer à utiliser l'éditeur.
+
+
+2.UTILISATION :
+
+Lorsque vous ouvrez le fichier index.html, l'éditeur WYSIWYG sera chargé dans le conteneur avec l'ID editor-container.
+Vous pouvez commencer à modifier le texte directement dans la zone de texte affichée.
+
+-Barre d'outils :
+
+Plusieurs outils de mise en forme accessibles via la barre d'outils en haut de la zone de texte :
+
+B : Applique un style "gras".
+I : Applique un style "italique".
+S : Applique un style "barré".
+Alignement : Aligne le texte à gauche, au centre, à droite ou justifie le texte.
+Code source : Permet d'alterner entre l'affichage WYSIWYG et l'affichage du code source.
++ / - : Augmente ou diminue la taille de la police du texte sélectionné.
+Sélecteur de couleur : Change la couleur du texte sélectionné.
+Sélecteur de taille de police : Permet de changer la taille du texte.
+
+-Sauvegarde:
+
+Vous pouvez sauvegarder votre contenu manuellement en cliquant sur le bouton "Sauvegarder".
+
+Enregistrement automatique du contenu toutes les 5 minutes. Le contenu est stocké dans le localStorage du navigateur.
+
+
+3.PERSONNALISATION :
+
+-Personnalisation de l'apparence :
+Le fichier styles.css contient les styles de l'éditeur. Vous pouvez personnaliser les couleurs, la taille de la barre d'outils, la zone de texte, et d'autres éléments visuels en modifiant ce fichier.
+
+-Ajouter de nouvelles fonctionnalités :
+Pour ajouter un nouveau bouton à la barre d'outils, utilisez la fonction addButton dans le fichier my_wysiwyg.js.
+
+-Changer le comportement de sauvegarde : 
+Le mécanisme de sauvegarde utilise localStorage. Vous pouvez modifier la méthode saveContent() pour changer le format ou l'endroit où le contenu est sauvegardé, comme en l'envoyant à un serveur.
+
+
+4.TECHNOLOGIES UTILISÉES :
+
+HTML5 : Structure de la page web.
+CSS3 : Styles de la barre d'outils et de la zone de texte.
+JavaScript (ES6) : Logique de l'éditeur, manipulation DOM et gestion des événements.
+LocalStorage : Sauvegarde automatique du contenu.
